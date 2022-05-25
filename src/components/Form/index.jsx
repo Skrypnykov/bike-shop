@@ -58,7 +58,7 @@ function Form() {
     const onSubmitFormData = (e) => {
         e.preventDefault();
         if (validateFormData()) {
-            fetch("https://json-server-some-test.herokuapp.com/bike-request", {
+            fetch("https://json-serve-some-test.herokuapp.com/bike-request", {
                 method: "post",
                 headers: {
                     "Content-type": "application/json; charset=UTF-8",
@@ -83,7 +83,7 @@ function Form() {
     const onSubmitDelivery = (e) => {
         e.preventDefault();
         if(validateDelivery){
-            fetch(`https://json-server-some-test.herokuapp.com/bike-request/${deliveryNumber.value}`)
+            fetch(`https://json-serve-some-test.herokuapp.com/bike-request/${deliveryNumber.value}`)
                 .then(res => { 
                     setStatus(deliveryNumber.value ? res.status : "") 
                 })
