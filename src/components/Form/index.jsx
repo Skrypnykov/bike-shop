@@ -83,7 +83,7 @@ function Form() {
     const onSubmitDelivery = (e) => {
         e.preventDefault();
         if(validateDelivery){
-            fetch(`https://json-server-some-test.herokuapp.com/${deliveryNumber.value}`)
+            fetch(`https://json-server-some-test.herokuapp.com/bike-request/${deliveryNumber.value}`)
                 .then(res => { 
                     setStatus(deliveryNumber.value ? res.status : "") 
                 })
